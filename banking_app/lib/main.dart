@@ -1,4 +1,4 @@
-import 'package:banking_app/banking_app_home_page.dart';
+import 'package:banking_app/pages/banking_app_home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
