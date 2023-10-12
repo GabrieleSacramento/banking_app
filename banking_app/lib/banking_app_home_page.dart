@@ -1,3 +1,5 @@
+import 'package:banking_app/my_credit_card_page.dart';
+import 'package:banking_app/my_profile_page.dart';
 import 'package:flutter/material.dart';
 
 class BankingAppHomePage extends StatelessWidget {
@@ -53,54 +55,68 @@ class BankingAppHomePage extends StatelessWidget {
                   padding: const EdgeInsets.all(24.0),
                   child: Column(
                     children: [
-                      Container(
-                        decoration: BoxDecoration(
-                          color: const Color.fromRGBO(255, 255, 255, 0.42),
-                          borderRadius: BorderRadius.circular(16),
-                        ),
-                        child: const ListTile(
-                          leading: Icon(
-                            Icons.credit_card,
-                            color: Colors.white,
+                      GestureDetector(
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => const MyCreditCardPage(),
                           ),
-                          title: Text(
-                            'See my credit card',
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w500,
+                        ),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: const Color.fromRGBO(255, 255, 255, 0.42),
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                          child: const ListTile(
+                            leading: Icon(
+                              Icons.credit_card,
                               color: Colors.white,
                             ),
-                          ),
-                          trailing: Icon(
-                            Icons.chevron_right,
-                            color: Colors.white,
+                            title: Text(
+                              'See my credit card',
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white,
+                              ),
+                            ),
+                            trailing: Icon(
+                              Icons.chevron_right,
+                              color: Colors.white,
+                            ),
                           ),
                         ),
                       ),
                       const SizedBox(
                         height: 16,
                       ),
-                      Container(
-                        decoration: BoxDecoration(
-                          color: const Color.fromRGBO(255, 255, 255, 0.42),
-                          borderRadius: BorderRadius.circular(16),
-                        ),
-                        child: const ListTile(
-                          leading: Icon(
-                            Icons.person,
-                            color: Colors.white,
+                      GestureDetector(
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => const MyProfilePage(),
                           ),
-                          title: Text(
-                            'See my profile',
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w500,
+                        ),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: const Color.fromRGBO(255, 255, 255, 0.42),
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                          child: const ListTile(
+                            leading: Icon(
+                              Icons.person,
                               color: Colors.white,
                             ),
-                          ),
-                          trailing: Icon(
-                            Icons.chevron_right,
-                            color: Colors.white,
+                            title: Text(
+                              'See my profile',
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white,
+                              ),
+                            ),
+                            trailing: Icon(
+                              Icons.chevron_right,
+                              color: Colors.white,
+                            ),
                           ),
                         ),
                       )
